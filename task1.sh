@@ -1,1 +1,0 @@
- ls -l | perl -nle 'if($.!=1){ $_=~ s/(\s+)/;/gi; my @f=split(/;/,$_, 0); my $gath=$f[0]; my $s=";"; for(my $i=1; $i<(scalar @f); $i++){if($i>8){$s=" "}; $gath=$gath.$s.$f[$i]}; print $gath}' | cat >  file.txt
